@@ -163,20 +163,27 @@ function App() {
           )}
         </div>
       </div>
-      {incorrectLetters.length && (
-        <p
-          style={{
-            position: 'absolute',
-            bottom: 0,
-            alignSelf: 'center',
-            left: '40%',
-            right: '40%',
-            textAlign: 'center',
-          }}
-        >
-          Click & Drag to interact
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          alignSelf: 'center',
+          left: '38%',
+          right: '38%',
+          textAlign: 'center',
+        }}
+      >
+        {incorrectLetters.length > 0 && <p>Click & Drag to interact</p>}
+        <p>
+          <span>by </span>
+          <a href='https://christian-bermeo.netlify.app/'>Christian Bermeo</a>
+          <br />
+          <span> model by </span>
+          <a href='https://sketchfab.com/3d-models/lego-dead-pool-c63bbc6f7c574e3899a50b0dd8a2c46d'>
+            Ollendorf
+          </a>
         </p>
-      )}
+      </div>
     </>
   );
 }
