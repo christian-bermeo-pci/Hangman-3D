@@ -49,6 +49,7 @@ export const Keyboard = ({
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
+        visibility: disabled ? 'hidden' : 'visible',
       }}
     >
       {KEYS.map((key) => {

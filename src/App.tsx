@@ -151,12 +151,16 @@ function App() {
           </div>
 
           {/* Keyboard component */}
-          <Keyboard
-            disabled={isWinner || isLoser}
-            activeLetters={activeLetters}
-            inactiveLetters={incorrectLetters}
-            addGuessedLetter={addGuessedLetter}
-          />
+          {!isWinner || !isLoser ? (
+            <Keyboard
+              disabled={isWinner || isLoser}
+              activeLetters={activeLetters}
+              inactiveLetters={incorrectLetters}
+              addGuessedLetter={addGuessedLetter}
+            />
+          ) : (
+            <></>
+          )}
         </div>
       </div>
       {incorrectLetters.length && (
@@ -164,7 +168,10 @@ function App() {
           style={{
             position: 'absolute',
             bottom: 0,
-            left: '45%',
+            alignSelf: 'center',
+            left: '40%',
+            right: '40%',
+            textAlign: 'center',
           }}
         >
           Click & Drag to interact
